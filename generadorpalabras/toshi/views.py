@@ -2,12 +2,12 @@ from django.shortcuts import render, HttpResponse
 
 def index(request):
     """ return HttpResponse("app de Toshi") """
-    return render(request, "index.html")
+    return render(request, "toshi/index.html")
 
 
 def crear(request):
     """ return HttpResponse("crear") """
-    return render(request, "creando.html")
+    return render(request, "toshi/creando.html")
 
 
 def mostrar(request):
@@ -17,7 +17,7 @@ def mostrar(request):
         "favorite_color": "turquoise",
         "pets": ["Bruce", "Fitz", "Georgie"]
     }
-    return render(request, "mostrando.html", context)
+    return render(request, "toshi/mostrando.html", context)
 
 
 def eliminar(request):

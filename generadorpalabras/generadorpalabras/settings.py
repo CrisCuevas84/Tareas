@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'criscuevas',
     'time_display',
     'toshi',
     'django.contrib.admin',
