@@ -3,5 +3,5 @@ from . import views	# the . indicates that the views file can be found in the sa
                     
 urlpatterns = [
     path('', views.index),
-    path('form/', views.index),
+    path('crear', views.crear),
 ]
