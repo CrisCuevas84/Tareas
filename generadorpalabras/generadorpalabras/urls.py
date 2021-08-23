@@ -20,4 +20,5 @@ urlpatterns = [
     # path('admin/', admin.site.urls),
     path('', include('toshi.urls')),
     path('time/', include('time_display.urls')),
+    path('cris/', include('criscuevas.urls')),
 ]
