@@ -21,4 +21,5 @@ urlpatterns = [
     path('', include('toshi.urls')),
     path('time/', include('time_display.urls')),
     path('cris/', include('criscuevas.urls')),
+    path('form/', include('form.urls')),
 ]
