@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'form',
     'criscuevas',
     'time_display',
     'toshi',
