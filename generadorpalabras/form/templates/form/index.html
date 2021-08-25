@@ -7,6 +7,14 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Holaaa</h1>
+    <h1>FORMULARIO</h1>
+    <h3>Create a User</h3>
+    <form action='/users' method='post'>
+        {% csrf_token %}
+        Name: <input type='text' name='name'>
+        Email: <input type='text' name='email'>
+        <!-- <input type='submit'> -->
+        <button type='submit'>Enviar</button>
+    </form>
 </body>
 </html>
