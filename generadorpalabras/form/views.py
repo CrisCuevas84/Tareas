@@ -16,4 +16,12 @@ def create_user(request):
     email_from_form = request.POST['email']
     print(name_from_form)
     print(email_from_form)
-    return render(request,"form/index.html")
+
+    # Se crear contexto para no procesar de inmediato como respuesta a solicictud post
+    # Se crea archivo show.html y se agrega al código
+    context = {
+        "name_on_template" : name_from_form,
+        "email_on_template" : email_from_form
+    }
+    return render(request,"form/show.html",context)
+    # return render(request,"form/index.html")
