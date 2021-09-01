@@ -17,13 +17,11 @@
                 <h2 class="">Generador</h2>
                 <h4 class="pb-5">Intento N° {{ request.session.intentos }}</h4>
                 <h3 class="p-3">{{ unique_id }}</h3>
-
                 <p class="p-3">
-                    <button type="button" class="btn btn-dark">Generar</button>
-                    <form action="process_money" method="POST"> <!-- podemos ser específicos en la ruta con el action -->
+                    <form action="generar" method="POST"> <!-- podemos ser específicos en la ruta con el action -->
                         {% csrf_token %}
-                        <input type="hidden" name="farm"> <!-- Nos piden agregar un input en el ejercicio, podemos llamar al metodo específico -->
-                        <button type="button" class="btn btn-dark">Generar!</button>
+                        <input type="hidden" name="boton"> <!-- Nos piden agregar un input en el ejercicio, podemos llamar al metodo específico -->
+                        <button type="submit" class="btn btn-dark">Generar!</button>
                     </form>
                 </p>
             </div>
