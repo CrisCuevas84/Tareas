@@ -4,14 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <title>Generador</title>
-<!-- {% comment %}     {% load static %}
-    <link rel="stylesheet" href="{% static 'css/style.css' %}"> {% endcomment %} -->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">  
 </head>
 <body>
     <div class="container">
-        <h1>Generador de palabras</h1>
-        <h3>{{ unique_id }}</h3>
+        <div class="row justify-content-md-center">
+            <div class="col col-lg-6 p-5">            
+                <h2 class="">Generador</h2>
+                <h4 class="pb-5">Intento N° {{ request.session.intentos }}</h4>
+                <h3 class="p-3">{{ unique_id }}</h3>
+
+                <p class="p-3">
+                    <button type="button" class="btn btn-dark">Generar</button>
+                    <form action="process_money" method="POST"> <!-- podemos ser específicos en la ruta con el action -->
+                        {% csrf_token %}
+                        <input type="hidden" name="farm"> <!-- Nos piden agregar un input en el ejercicio, podemos llamar al metodo específico -->
+                        <button type="button" class="btn btn-dark">Generar!</button>
+                    </form>
+                </p>
+            </div>
+        </div>
     </div>
 </body>
 </html>
